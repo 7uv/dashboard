@@ -1,3 +1,8 @@
+buildscript {
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.3.2.RELEASE"
+    }
+}
 plugins {
 	id 'org.springframework.boot' version '2.3.2.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
@@ -6,7 +11,16 @@ plugins {
 
 group = 'xyz.sayantan'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+/* sourceCompatibility = '11' */
 
 configurations {
 	compileOnly {
@@ -41,6 +55,10 @@ dependencies {
 	}
 	testImplementation 'io.projectreactor:reactor-test'
 	testImplementation 'org.springframework.batch:spring-batch-test'
+}
+
+bootJar {
+    mainClassName = 'xyz.sayantan.dashboard.DashboardApplication'
 }
 
 dependencyManagement {
