@@ -352,10 +352,9 @@ build
 
 nohup.out
 
-src/main/resources/META-INF/persistence.xml
+# src/main/resources/META-INF/persistence.xml
 
-rtf-web/src/main/web/server/uploads
-upload-dir
+# app-web/src/main/web/server/uploads
 
 build
 gradle
