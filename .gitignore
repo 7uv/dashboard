@@ -1,7 +1,11 @@
 # Gradle Build Files
 gradlew
 gradlew.bat
-/.attach_pid*
+/.attach_pid
+
+# backups
+**/*.7z
+backup
 
 ### NetBeans template
 nbproject/private/
