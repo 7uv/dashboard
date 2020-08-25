@@ -7,5 +7,5 @@
 [Swathi Prasad](https://github.com/swathisprasad) <br>
 [Di Wang](https://github.com/wangdicoder) <br> 
 [Lucas Marx](https://github.com/LukasMarx) <br>
-[Raja vishnuvardhan Reddy Chintam] (https://github.com/visrey) <br>
-[Alejandro Du] (https://github.com/alejandro-du)
+[Raja vishnuvardhan Reddy Chintam](https://github.com/visrey) <br>
+[Alejandro Du](https://github.com/alejandro-du)
