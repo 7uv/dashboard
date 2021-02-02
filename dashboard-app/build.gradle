@@ -10,7 +10,7 @@ plugins {
 }
 
 group = 'xyz.sayantan'
-version = '0.0.1-SNAPSHOT'
+version = '0.00.001-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
