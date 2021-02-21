@@ -2,20 +2,24 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<parent>
+	<!-- <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.3.2.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
+	</parent> -->
+	<parent>
+		<groupId>xyz.sayantan</groupId>
+		<artifactId>dashboard</artifactId>
+		<version>1.00.000.RELEASE</version>
 	</parent>
-	<groupId>xyz.sayantan</groupId>
-	<artifactId>dashboard</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>dashboard</name>
-	<description>Demo project for Spring Boot</description>
+	<artifactId>dashboard-app</artifactId>
+	<name>dashboard-app</name>
+	<description>Dashboard App</description>
 
 	<properties>
 		<java.version>1.8</java.version>
+		<project.version>1.00.000.RELEASE</project.version>
 		<vaadin.version>14.3.2</vaadin.version>
 		<spring-boot-admin.version>2.1.1</spring-boot-admin.version>
 	</properties>
@@ -26,7 +30,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-batch</artifactId>
 		</dependency>
@@ -39,18 +43,13 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-rest-hal-browser</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.session</groupId>
 			<artifactId>spring-session-core</artifactId>
-		</dependency>
+		</dependency> -->
 
 		<!-- Web Framework -->
 		<dependency>
@@ -65,19 +64,24 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>
 		
 		<!-- View Resolver -->
-		<dependency>
+		<!-- <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-        </dependency>
+        </dependency> -->
 		<!-- <dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-spring-boot-starter</artifactId>
 		</dependency> -->
 
 		<!-- Dev Tools -->
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
@@ -92,7 +96,7 @@
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
-		</dependency>
+		</dependency> -->
 		
 		<!-- Test -->
 		<dependency>
@@ -123,13 +127,16 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-rest</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
+        </dependency>
+
+		<!-- CSV -->
+        <dependency>
+            <groupId>com.opencsv</groupId>
+            <artifactId>opencsv</artifactId>
+            <version>4.5</version>
         </dependency>
 
 		<!-- Logging -->
@@ -144,6 +151,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+		<!-- Web module -->
+		<dependency>
+			<groupId>xyz.sayantan</groupId>
+			<artifactId>dashboard-web</artifactId>
+			<version>${project.version}</version>
+			<scope>runtime</scope>
+		</dependency>
 	</dependencies>
 
 	<!-- <dependencyManagement>
@@ -161,8 +176,45 @@
 	<build>
 		<plugins>
 			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+					<id>copy-resources</id>
+					<phase>validate</phase>
+					<goals><goal>copy-resources</goal></goals>
+					<configuration>
+						<outputDirectory>${project.build.directory}/classes/resources/</outputDirectory >
+						<resources>
+							<resource>
+								<directory>${project.parent.basedir}/dashboard-web/dist/</directory >
+							</resource>
+						</resources>
+					</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- <plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+			</plugin> -->
+			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludeDevtools>true</excludeDevtools>
+                </configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<configuration>
+					<packagingExcludes>WEB-INF/lib/tomcat-*.jar</packagingExcludes>
+					<warName>dashboard</warName>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>

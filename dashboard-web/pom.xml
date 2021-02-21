@@ -3,18 +3,23 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
 	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<modelVersion>4.0.0</modelVersion>
+  <properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.version>1.00.000.RELEASE</project.version>
+    <node.version>v14.5.0</node.version>
+    <npm.version>6.14.8</npm.version>
+	</properties>
+
 	<parent>
-		<groupId>org.sayantan.dashboard</groupId>
-		<artifactId>sayantan</artifactId>
+		<groupId>xyz.sayantan</groupId>
+		<artifactId>dashboard</artifactId>
 		<version>1.00.000.RELEASE</version>
 	</parent>
 	<artifactId>dashboard-web</artifactId>
 	<name>dashboard-web</name>
-	<url>http://maven.apache.org</url>
+	<url>https://sayantan.xyz</url>
 	<packaging>war</packaging>
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -30,8 +35,8 @@
 				<version>1.7.5</version>
 
 				<configuration>
-					<nodeVersion>v11.9.0</nodeVersion>
-					<npmVersion>6.9.0</npmVersion>
+					<nodeVersion>${node.version}</nodeVersion>
+					<npmVersion>${npm.version}</npmVersion>
 					<workingDirectory>src/main/web/</workingDirectory>
 				</configuration>
 

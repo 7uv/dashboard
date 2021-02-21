@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 
-    Copyright (c) 2015, Sayantan Ghosh, and individual
-    contributors by the @authors tag. See the copyright.txt in the
+    Copyright (c) 2015-2021, Sayantan Ghosh, and individual
+    contributors by the @authors tag. See the COPYRIGHT in the
     distribution for a full listing of individual contributors.
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,13 +17,13 @@
 -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.sayantan.dashboard</groupId>
-	<artifactId>sayantan</artifactId>
-	<version>1.00.000.RELEASE</version>
+	<groupId>xyz.sayantan</groupId>
+	<artifactId>dashboard</artifactId>
+	<version>1.00.0000.RELEASE</version>
 	<packaging>pom</packaging>
 	<name>${qs.name.prefix}</name>
-	<description>Base Parent Template</description>
-	<url>https://www.sayantan.co.uk/</url>
+	<description>Dashboard App</description>
+	<url>https://sayantan.xyz/</url>
 	<licenses>
 		<license>
 			<name>Apache License, Version 2.0</name>
@@ -37,27 +37,30 @@
 		</license>
 	</licenses>
 	<scm>
-		<connection>scm:git://www.sayantan.co.uk/home/testqa/cttgwm/</connection>
-		<developerConnection>scm:git:www.sayantan.co.uk:/home/testqa/cttgwm/</developerConnection>
-		<url>https://www.sayantan.co.uk/gitlab/</url>
+		<connection>scm:git://sayantan.xyz/dashboard/</connection>
+		<developerConnection>scm:git:sayantan.xyz:/dashboard/</developerConnection>
+		<url>https://sayantan.xyz/</url>
 		<tag>HEAD</tag>
 	</scm>
 	<developers>
 		<developer>
 			<id>SG</id>
 			<name>Sayantan Ghosh</name>
-			<email>ghosh@sayantan.co.uk</email>
+			<email>ghosh@sayantan.xyz</email>
 			<roles>
+				<role>President &amp; CEO</role>
+				<role>Architect</role>
 				<role>Project Manager</role>
-				<role>Java Developer</role>
+				<role>Developer</role>
 			</roles>
 		</developer>
 	</developers>
 	<properties>
-		<qs.name.prefix>Sayantan Project :</qs.name.prefix>
+		<qs.name.prefix>Dashboard Project</qs.name.prefix>
+		<project.version>1.00.000.RELEASE</project.version>
 		<root.dir>${project.basedir}</root.dir>
 		<jboss.home.name>EAP7_HOME</jboss.home.name>
-		<product.name>JBoss EAP</product.name>
+		<product.name>Dashboard App</product.name>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<version.wildfly.maven.plugin>1.2.1.Final</version.wildfly.maven.plugin>
 	</properties>

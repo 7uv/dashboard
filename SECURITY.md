@@ -7,7 +7,7 @@ Following versions of this project are currently being supported with security u
 |   Version      |      Supported     |
 | -------------- | ------------------ |
 | x.x.x-LIVE     | :white_check_mark: |
-| 0.01.xxx       | :white_check_mark: |
+| x.x.x-RELEASE  | :white_check_mark: |
 | x.x.x-SNAPSHOT | :x:                |
 | < 0.00.x       | :x:                |
 

@@ -1,5 +1,5 @@
 # Contributors
-[Sayantan Ghosh](ghosh@sayantan.london) <br>
+[Sayantan Ghosh](ghosh@sayantan.xyz) <br>
 
 ### With Open Source Code thankfully hosted by:
 [Roberto Cortez](radcortez@yahoo.com) <br>
