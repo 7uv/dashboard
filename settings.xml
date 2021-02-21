@@ -55,7 +55,7 @@
 				<repository>
 					<id>local-repo</id>
 					<name>Local Repository for Maven</name>
-					<url>file://${project.basedir}/src/main/webapp/WEB-INF</url>
+					<url>file://${project.basedir}/src/main/webapp/WEB-INF/lib</url>
 					<layout>default</layout>
 				</repository>
 			</repositories>
@@ -90,7 +90,7 @@
 			<protocol>http</protocol>
 			<username>SayantanG</username>
 			<password>sg@12345</password>
-			<host>10.250.4.65</host>
+			<host>192.168.1.1</host>
 			<port>8080</port>
 			<nonProxyHosts>127.0.0.1|localhost|10.173.0.52</nonProxyHosts>
 		</proxy>-->
