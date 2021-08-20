@@ -1,6 +1,6 @@
 {
   "name": "dashboard-web",
-  "version": "0.0.0",
+  "version": "0.00.001",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -25,8 +25,7 @@
     "@fortawesome/fontawesome-common-types": "^0.2.34",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "highcharts": "^8.2.2",
-    "n": "^7.0.1",
+    "highcharts": "^9.2.1",
     "ngx-logger": "^4.1.9",
     "node": "^15.8.0",
     "nodejs": "0.0.0",
@@ -37,7 +36,7 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1100.7",
+    "@angular-devkit/build-angular": "^12.2.2",
     "@angular/cli": "^11.1.2",
     "@angular/compiler-cli": "^11.0.9",
     "@types/jasmine": "^3.6.3",
@@ -45,7 +44,7 @@
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
-    "karma": "~5.2.0",
+    "karma": "^6.3.4",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
