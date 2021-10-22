@@ -13,12 +13,12 @@
 	<parent>
 		<groupId>xyz.sayantan</groupId>
 		<artifactId>dashboard</artifactId>
-		<version>1.00.000.RELEASE</version>
+		<version>1.00.000-SG-RELEASE</version>
 	</parent>
 	<artifactId>dashboard-web</artifactId>
 	<name>dashboard-web</name>
 	<url>https://sayantan.xyz</url>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 	<build>
 		<plugins>
