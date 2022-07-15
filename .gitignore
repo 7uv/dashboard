@@ -6,6 +6,7 @@ gradlew.bat
 # backups
 **/*.7z
 backup
+dashboard-web/.angular/
 
 ### NetBeans template
 nbproject/private/
