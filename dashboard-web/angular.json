@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "dashboard-web"
+  "defaultProject": "dashboard-web",
+  "cli": {
+    "analytics": false
+  }
 }
