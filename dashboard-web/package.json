@@ -26,6 +26,7 @@
     "@fortawesome/fontawesome-common-types": "^6.1.1",
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
     "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "hammerjs": "^2.0.8",
     "highcharts": "^10.2.0",
     "ngx-logger": "^5.0.11",
     "node": "^18.5.0",
